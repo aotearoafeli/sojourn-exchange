@@ -1,5 +1,5 @@
 /* Sojourn Exchange — service worker (app shell + image cache) */
-const SHELL = 'sojourn-shell-v1';
+const SHELL = 'sojourn-shell-v2';
 const IMG = 'sojourn-img-v1';
 const CORE = ['./', './index.html', './css/style.css', './js/app.js', './data/properties.json', './assets/img/brand/mark.svg', './assets/img/brand/logo.svg'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(SHELL).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });

@@ -3,11 +3,11 @@
 Live link: https://claude.ai/artifact/W6AdsHEYiudyeqHhMmEz1D
 
 ## What changed in v3
-- 50 **real public listings**, all USD $20M+, 20–24 photographs each (1,178 photos). Sourced from
+- 50 **real public listings**, luxury residences (typically $5M–$100M), 20–24 photographs each (1,178 photos). Sourced from
   Sotheby's International Realty affiliate listings (see `docs/listings-manifest.tsv` for the source URL of each).
   Demo only — Sojourn is not affiliated with the brokers and the owners have not joined the exchange.
 - New mechanics: **publish free → receive 7 nights → +1 night for every night you host**; no membership —
-  you *apply to publish*; commission **0.5% from buyer and 0.5% from seller** on completion.
+  you *list your property* (stringently vetted); commission **0.5% from buyer and 0.5% from seller** on completion.
 - Every residence lists its **nearest private-aviation field and international airport** with a rough
   chauffeured (Maybach / limousine) drive time; launch/tender/helicopter legs are noted where relevant.
 - Multi-residence rotating hero on the home page; 20+ photo galleries with lightbox; "Shortest drive from jet" sort.

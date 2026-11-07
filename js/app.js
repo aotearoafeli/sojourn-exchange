@@ -225,18 +225,18 @@ function viewHome(){
     <div class="slides">${heroes.map((p,i)=>`<div class="slide ${i===0?'on':''}" style="background-image:url('${p.hero}')"></div>`).join('')}</div>
     <div class="wrap">
       <div>
-        <span class="eyebrow">The private exchange for investment residences · $20M and above</span>
-        <h1>Underwrite it<br><em>by living in it.</em></h1>
-        <p class="lead">Where principals and family offices acquire turnkey residences worth holding, and dispose of the ones their portfolio no longer needs. Fifty vetted, independently valued assets — each one open to a qualified buyer for a residency before any offer is made.</p>
+        <span class="eyebrow">The private exchange for luxury investment residences</span>
+        <h1>Try before you buy.<br><em>Put idle assets to work.</em></h1>
+        <p class="lead">Where principals, family offices, property funds and financial institutions acquire luxury residences worth holding, and list the ones their portfolio no longer needs. Every asset is vetted and independently valued, and open to a qualified buyer for a stay before any offer is made. And a property on the market no longer sits idle: every buyer-night it hosts earns you a night at any other residence on the exchange.</p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="#/browse">Acquire — view the residences</a>
-          <a class="btn btn-ghost" href="#/apply">Dispose — publish a residence</a>
+          <a class="btn btn-ghost" href="#/apply">List your property</a>
         </div>
       </div>
       <aside class="hero-card">
         <span class="eyebrow">At a glance</span>
-        <div class="row"><span>Minimum asset value</span><b>$20M</b></div>
-        <div class="row"><span>Fee to publish a disposal</span><b>None</b></div>
+        <div class="row"><span>Luxury residences, typically</span><b>$5M–$100M</b></div>
+        <div class="row"><span>Fee to list</span><b>None</b></div>
         <div class="row"><span>Residency nights issued per asset</span><b>7</b></div>
         <div class="row"><span>Earned per night you host a buyer</span><b>+1</b></div>
         <div class="row"><span>Commission on completion, each side</span><b>0.5%</b></div>
@@ -247,10 +247,14 @@ function viewHome(){
     </div>
   </section>
 
+  <section class="section dark" style="padding:70px 0">
+    <div class="wrap"><p class="quote">“We put the Como house on the exchange to exit it. Eleven buyers stayed; the fourth made an offer at valuation. The nights we earned took us to Aspen and Dubai — and Dubai is now in the portfolio.”</p><p class="muted" style="margin-top:22px">— Single-family office, Geneva · Sale and acquisition completed Q3 2026</p></div>
+  </section>
+
   <section class="section tight">
     <div class="wrap">
       <div class="stats">
-        <div><b>${PROPS.length}</b><span>Vetted assets on the exchange, all $20M+</span></div>
+        <div><b>${PROPS.length}</b><span>Vetted luxury assets live on the exchange today</span></div>
         <div><b>${fmtM(total)}</b><span>Aggregate asking value</span></div>
         <div><b>${new Set(PROPS.map(p=>p.country)).size}</b><span>Jurisdictions · private-aviation arrival on every listing</span></div>
         <div><b>0.5%</b><span>Commission each side · no retainer, no listing fee</span></div>
@@ -262,11 +266,11 @@ function viewHome(){
     <div class="wrap">
       <span class="eyebrow">Due diligence in residence</span>
       <h2>No one should acquire a $50M asset<br>from a brochure.</h2>
-      <p class="lead muted" style="max-width:760px;margin-top:16px;font-size:17px">A data room tells you what a residence earns. Only a residency tells you whether it is worth owning — how it sounds at night, how the staff run it, how the light falls on the water. Sojourn gives qualified buyers that diligence, and gives sellers the one thing that closes a trophy sale: a buyer who has already lived in the house.</p>
+      <p class="lead muted" style="max-width:760px;margin-top:16px;font-size:17px">A data room tells you what a residence earns. Only a residency tells you whether it is worth owning — how it sounds at night, how the staff run it, how the light falls on the water. Sojourn gives qualified buyers that diligence, and gives sellers the one thing that closes a trophy sale: a buyer who has already stayed in the house.</p>
       <div class="steps">
-        <div class="step"><div class="n">01</div><h3>Dispose: publish, receive seven nights</h3><p>Apply to publish a residence your portfolio no longer requires. Once title, valuation and ownership are verified it goes live at no cost, and seven residency nights are credited to you.</p></div>
-        <div class="step"><div class="n">02</div><h3>Host a buyer, earn a night</h3><p>Every night a vetted investor spends in your residence is a night of diligence on your asset — and adds one night to your balance. The more investors stay at your property, the more you accumulate.</p></div>
-        <div class="step"><div class="n">03</div><h3>Acquire: live in the shortlist</h3><p>Spend nights across the exchange — a lakefront villa on Como, a ranch under the Tetons, a penthouse above Central Park — and underwrite each as an owner would before committing capital.</p></div>
+        <div class="step"><div class="n">01</div><h3>List your property, receive seven nights</h3><p>Apply to list a residence your portfolio no longer requires. Once title, valuation and ownership have passed vetting it goes live at no cost, and seven residency nights are credited to you.</p></div>
+        <div class="step"><div class="n">02</div><h3>Have your property work for you</h3><p>A residence on the market elsewhere sits idle while it waits for a buyer. On Sojourn, every night a vetted investor spends in it is diligence on your asset — and adds one night to your balance, to spend visiting residences you are considering. The more buyers stay, the more you accumulate.</p></div>
+        <div class="step"><div class="n">03</div><h3>Acquire: try before you buy</h3><p>Spend nights across the exchange — a lakefront villa on Como, a ranch under the Tetons, a penthouse above Central Park — and assess each as an owner would before committing capital.</p></div>
         <div class="step"><div class="n">04</div><h3>Complete at 0.5% a side</h3><p>Offers are made in-platform with counsel and escrow in the jurisdiction. Buyer and seller each pay 0.5% on completion. No membership, no retainer, nothing else.</p></div>
       </div>
     </div>
@@ -297,20 +301,32 @@ function viewHome(){
       <div>
         <span class="eyebrow">For sellers</span>
         <h2>The buyer who has slept in the house<br>does not renegotiate.</h2>
-        <p style="margin-top:18px;font-size:16px;color:#3a3732">Trophy assets stall because buyers cannot price what they have not experienced. On Sojourn, every enquiry is a vetted principal with a residence of their own on the exchange, and every residency is a week of diligence done before the offer. Disposals complete faster, closer to valuation, with fewer conditions.</p>
+        <p style="margin-top:18px;font-size:16px;color:#3a3732">Trophy assets stall because buyers cannot price what they have not experienced. On Sojourn, every enquiry is a vetted principal with a residence of their own on the exchange, and every residency is a week of diligence done before the offer. Sales complete faster, closer to valuation, with fewer conditions — and the asset earns you nights at other residences for as long as it is listed.</p>
         <ul class="checks">
           <li>Independent valuation on every asset; asking price shown against it</li>
           <li>Private aviation and chauffeured arrival detailed for every residence</li>
           <li>Nights earned by hosting buyers never expire while the asset is live</li>
-          <li>No membership, no retainer — an application to publish, and 0.5% on completion</li>
+          <li>No membership, no retainer — an application to list, and 0.5% on completion</li>
         </ul>
-        <a class="btn btn-dark" style="margin-top:28px" href="#/apply">Publish a residence for disposal</a>
+        <a class="btn btn-dark" style="margin-top:28px" href="#/apply">List your property</a>
       </div>
     </div>
   </section>
 
   <section class="section dark" style="padding-bottom:110px">
-    <div class="wrap"><p class="quote">“We put the Como house on the exchange to exit it. Eleven buyers stayed; the fourth made an offer at valuation. The nights we earned took us to Aspen and Dubai — and Dubai is now in the portfolio.”</p><p class="muted" style="margin-top:22px">— Single-family office, Geneva · Disposal and acquisition completed Q3 2026</p></div>
+    <div class="wrap">
+      <span class="eyebrow">Access</span>
+      <h2>Easy to look. Stringent to list.</h2>
+      <div class="steps" style="margin-top:28px">
+        <div class="step"><div class="n">01</div><h3>Create an account in a minute</h3><p>Anyone may open an account and view every residence, its valuation, data room and arrival details. No fee, no membership, no referral.</p></div>
+        <div class="step"><div class="n">02</div><h3>Listing is vetted, rigorously</h3><p>To list a property, the asset, its title, its independent valuation and its beneficial owner all go through a stringent vetting process before anything is published. Approval typically takes 3–5 working days.</p></div>
+        <div class="step"><div class="n">03</div><h3>Luxury only — no fixed minimum</h3><p>The exchange is for luxury residences, in practice $5M to $100M. There is no minimum asset value; each application is judged on the quality of the asset, not a price threshold.</p></div>
+      </div>
+      <div class="hero-actions" style="margin-top:34px">
+        <a class="btn btn-gold" href="#/signup">Create an account</a>
+        <a class="btn btn-ghost" href="#/apply">List your property</a>
+      </div>
+    </div>
   </section>`;
   bindFavs();
   // multi-hero rotation
@@ -694,14 +710,14 @@ function viewHow(){
   app.innerHTML = `
   <section class="section dark"><div class="wrap">
     <span class="eyebrow">How the exchange works</span>
-    <h1 style="font-size:clamp(36px,5vw,64px)">Acquire with diligence.<br>Dispose with conviction.</h1>
-    <p class="lead muted" style="max-width:720px;margin-top:18px;font-size:17px">Sojourn is a closed exchange of investment residences, $20M and above, held by principals and family offices who open them to one another. Buyers live in an asset before they bid; sellers meet buyers who have already lived in theirs. There is no membership and no fee to publish — the working currency is nights.</p>
+    <h1 style="font-size:clamp(36px,5vw,64px)">Acquire with diligence.<br>List with conviction.</h1>
+    <p class="lead muted" style="max-width:720px;margin-top:18px;font-size:17px">Sojourn is a closed exchange of luxury investment residences held by principals, high-net-worth individuals, family offices, property funds and financial institutions, who open them to one another. Buyers stay in an asset before they bid; sellers put a property that would otherwise sit idle on the market to work, earning nights at other residences. Creating an account takes a minute; listing a property means stringent vetting of the asset and its owner. There is no membership and no fee to list — the working currency is nights.</p>
   </div></section>
   <section class="section"><div class="wrap">
     <div class="steps" style="margin-top:0">
-      <div class="step light"><div class="n">01</div><h3>Dispose: apply to publish</h3><p>Submit a residence of $20M or more that your portfolio no longer requires, with an independent valuation and 20+ photographs. We verify title, valuation and beneficial ownership. Approval usually takes 3–5 working days; publishing is free.</p></div>
+      <div class="step light"><div class="n">01</div><h3>List your property</h3><p>Submit a luxury residence that your portfolio no longer requires — usually $5M to $100M, with no fixed minimum — with an independent valuation and 20+ photographs. Title, valuation and beneficial ownership go through stringent vetting. Approval usually takes 3–5 working days; listing is free.</p></div>
       <div class="step light"><div class="n">02</div><h3>Seven residency nights, issued</h3><p>On approval, seven nights are credited to you. One night = one night of in-person diligence at any residence on the exchange.</p></div>
-      <div class="step light"><div class="n">03</div><h3>Host buyers, accumulate nights</h3><p>Every night a vetted investor stays at your residence is diligence on your asset — and adds one night to your balance. An asset that hosts twenty buyer-nights a year funds twenty nights of your own acquisition search.</p></div>
+      <div class="step light"><div class="n">03</div><h3>Your property works for you</h3><p>Instead of sitting idle while it sells, your residence earns: every night a vetted investor stays is diligence on your asset — and adds one night to your balance. An asset that hosts twenty buyer-nights a year funds twenty nights of your own acquisition search.</p></div>
       <div class="step light"><div class="n">04</div><h3>Acquire and complete</h3><p>Offers are made in-platform; we introduce counsel and escrow in the jurisdiction. Buyer pays 0.5% and seller pays 0.5% of the completed price, from escrow. Nothing else.</p></div>
     </div>
   </div></section>
@@ -726,8 +742,10 @@ function viewHow(){
     <h2 style="margin-bottom:28px">Frequently asked</h2>
     <div class="grid" style="gap:40px">
       ${[
-        ['Who is the exchange for?','Principals, family offices, trustees and their advisers who hold investment residences of $20M and above and want to acquire or dispose of them between qualified parties, privately, with diligence done in person.'],
-        ['Is this a membership club?','No. There is no membership and no subscription. You create an account, apply to publish a residence, and approval of that application is what admits you to the exchange.'],
+        ['Who is the exchange for?','Principals, high-net-worth individuals, family offices, property funds and financial institutions who hold luxury investment residences and want to acquire or sell them between qualified parties, privately, with diligence done in person.'],
+        ['Is there a minimum asset value?','No. The exchange is for luxury residences — in practice $5M to $100M — and there is no fixed minimum. Each application is judged on the quality of the asset, not a price threshold.'],
+        ['Is this a membership club?','No. There is no membership and no subscription. Creating an account takes a minute and lets you view every residence. Listing a property is different: the asset, its title, its valuation and its beneficial owner go through a stringent vetting process before it is published.'],
+        ['Why list here rather than leave it with an agent?','Because elsewhere a property on the market sits idle. On Sojourn every buyer-night it hosts earns you a night at any other residence on the exchange — your property works for you while it sells, and the buyers who stay arrive at the offer already convinced.'],
         ['Who can stay in my residence?','Only vetted principals with nights in their balance — every guest has an asset of their own on the exchange. Residencies are hosted diligence visits, not lettings; no money changes hands and your house manager remains in place.'],
         ['How do I earn more nights?','Host buyers. Each night an investor stays at your residence adds one night to your balance. You may also publish a second residence for another seven.'],
         ['Can I buy nights?','No. Nights are only issued for publishing and earned by hosting buyers. That keeps the exchange two-sided: everyone staying in your asset is a seller too.'],
@@ -747,9 +765,9 @@ function viewApply(){
   let step = 0; const data = {};
   const steps = ['Residence', 'Valuation & documents', 'Owner vetting', 'Review'];
   const wrap = () => `<section class="section"><div class="wrap" style="max-width:860px">
-    <span class="eyebrow">Dispose · apply to publish</span>
+    <span class="eyebrow">List your property</span>
     <h1 style="font-size:clamp(34px,4.5vw,56px);margin-bottom:8px">Release an asset from the portfolio.<br><span class="muted" style="font-size:.6em">Publish free, receive seven nights, earn one more for every buyer-night you host.</span></h1>
-    <p class="muted" style="margin-bottom:28px">There is no membership. Approval typically takes 3–5 working days once title and the valuation report are verified; nights are credited on approval and the residence becomes visible to vetted buyers.</p>
+    <p class="muted" style="margin-bottom:28px">There is no membership, but every listing is stringently vetted: title, independent valuation and beneficial ownership are verified before anything is published. Approval typically takes 3–5 working days; nights are credited on approval and the residence becomes visible to vetted buyers.</p>
     <div class="stepper">${steps.map((s,i)=>`<div class="${i===step?'on':i<step?'done':''}">${i+1}. ${s}</div>`).join('')}</div>
     <div class="panel" id="stepBox"></div>
   </div></section>`;
@@ -759,7 +777,7 @@ function viewApply(){
     () => `<form class="form" id="f">
       <div class="two"><div><label>Residence name</label><input name="name" required value="${esc(data.name||'')}" placeholder="e.g. Villa Les Cèdres"></div><div><label>Type</label><select name="type">${['Villa','Estate','Mansion','Penthouse','Townhouse','Castle','Ranch','Chalet','Private Island'].map(t=>`<option ${data.type===t?'selected':''}>${t}</option>`).join('')}</select></div></div>
       <div class="two"><div><label>City / area</label><input name="city" required value="${esc(data.city||'')}" placeholder="e.g. Saint-Jean-Cap-Ferrat"></div><div><label>Country</label><input name="country" required value="${esc(data.country||'')}"></div></div>
-      <div class="two"><div><label>Asking price (USD)</label><input name="price" type="number" min="20000000" step="250000" required value="${data.price||''}" placeholder="20,000,000 minimum"></div><div><label>Interior m²</label><input name="sqm" type="number" required value="${data.sqm||''}"></div></div>
+      <div class="two"><div><label>Asking price (USD)</label><input name="price" type="number" min="1000000" step="250000" required value="${data.price||''}" placeholder="e.g. 25,000,000 — luxury residences, usually $5M–$100M"></div><div><label>Interior m²</label><input name="sqm" type="number" required value="${data.sqm||''}"></div></div>
       <div class="two"><div><label>Bedrooms</label><input name="beds" type="number" required value="${data.beds||''}"></div><div><label>Bathrooms</label><input name="baths" type="number" required value="${data.baths||''}"></div></div>
       <div class="two"><div><label>Nearest private-aviation field</label><input name="apPriv" value="${esc(data.apPriv||'')}" placeholder="e.g. Farnborough (FAB)"></div><div><label>Nearest international airport</label><input name="apComm" value="${esc(data.apComm||'')}" placeholder="e.g. London Heathrow (LHR)"></div></div>
       <div><label>Turnkey inclusions</label><textarea name="incl" placeholder="Furniture, art, vehicles, staff contracts, management agreement…">${esc(data.incl||'')}</textarea></div>
@@ -820,7 +838,7 @@ function viewLogin({ query }){
   app.innerHTML = authShell(`
     <span class="eyebrow">Sojourn Exchange</span>
     <h1 style="font-size:40px;margin:8px 0 6px">Sign in</h1>
-    <p class="muted" style="margin-bottom:22px">For vetted principals, family offices and their advisers.</p>
+    <p class="muted" style="margin-bottom:22px">For principals, family offices, property funds and financial institutions.</p>
     <form class="form" id="loginForm">
       <div><label>Email</label><input name="email" type="email" required autocomplete="username" placeholder="you@familyoffice.com"></div>
       <div><label>Password</label><input name="pw" type="password" required autocomplete="current-password"></div>
@@ -840,9 +858,9 @@ function viewSignup({ query }){
   app.innerHTML = authShell(`
     <span class="eyebrow">Sojourn Exchange</span>
     <h1 style="font-size:40px;margin:8px 0 6px">Create an account</h1>
-    <p class="muted" style="margin-bottom:22px">An account lets you shortlist residences, apply to publish, and — once a residence is approved — reserve residencies with your nights. Vetting follows your first application.</p>
+    <p class="muted" style="margin-bottom:22px">An account takes a minute and lets you view and shortlist every residence. Listing a property is where the stringent vetting happens — and once a listing is approved, you reserve stays with your nights.</p>
     <form class="form" id="signupForm">
-      <div class="two"><div><label>Full name</label><input name="name" required placeholder="Name as on passport"></div><div><label>Acting as</label><select name="entity"><option>Private investor</option><option>Family office</option><option>Trustee</option><option>Adviser / private bank</option><option>Developer</option></select></div></div>
+      <div class="two"><div><label>Full name</label><input name="name" required placeholder="Name as on passport"></div><div><label>Acting as</label><select name="entity"><option>Private investor</option><option>Family office</option><option>Property fund</option><option>Financial institution</option><option>Trustee</option><option>Adviser / private bank</option><option>Developer</option></select></div></div>
       <div><label>Email</label><input name="email" type="email" required autocomplete="username"></div>
       <div class="two"><div><label>Password</label><input name="pw" type="password" required minlength="8" autocomplete="new-password"></div><div><label>Confirm password</label><input name="pw2" type="password" required minlength="8" autocomplete="new-password"></div></div>
       <label class="chk"><input type="checkbox" required style="width:auto"> I understand that publishing or transacting requires identity, source-of-wealth and ownership vetting.</label>
@@ -872,7 +890,7 @@ function viewDashboard(){
   app.innerHTML = `<section class="section"><div class="wrap">
     <div class="browse-head">
       <div><span class="eyebrow">Portfolio desk</span><h2>${esc(U.name.split(' ')[0])}'s exchange</h2><p class="muted">${esc(U.tier)} · ${esc(U.entity||'Private investor')} · vetted since ${longDate(U.memberSince)} · <span class="badge green">Verified</span></p></div>
-      <div class="pill-row"><a class="btn btn-gold" href="#/browse">Acquire — reserve a residency</a><a class="btn btn-outline" href="#/apply">Dispose — publish a residence</a></div>
+      <div class="pill-row"><a class="btn btn-gold" href="#/browse">Acquire — reserve a residency</a><a class="btn btn-outline" href="#/apply">List your property</a></div>
     </div>
     <div class="dash-grid">
       <div class="panel">
@@ -896,8 +914,8 @@ function viewDashboard(){
         ${state.offers.length ? state.offers.map(o=>{const p=byId(o.pid);return `<div class="list-item"><div class="t"><b>${esc(p.name)}</b><span>${fmt(o.price)} · ${shortDate(o.date)} · buyer-side 0.5% ${fmt(o.price*0.005)} · <span class="badge">${o.status}</span></span></div></div>`;}).join('') : '<div class="empty">No offers in progress.</div>'}
       </div>
       <div class="panel" style="grid-column:1/-1">
-        <h3>Assets published for disposal <a class="btn btn-outline btn-sm" href="#/apply">Publish another</a></h3>
-        ${!myListings.length && !state.submissions.length ? '<div class="empty">No residences published yet. Apply to publish one to receive your first seven nights.</div>' : ''}
+        <h3>Properties listed <a class="btn btn-outline btn-sm" href="#/apply">Publish another</a></h3>
+        ${!myListings.length && !state.submissions.length ? '<div class="empty">No properties listed yet. List one to receive your first seven nights.</div>' : ''}
         ${myListings.map(p=>`<div class="list-item"><img src="${p.thumb}"><div class="t"><b>${esc(p.name)}</b><span>${esc(p.city)} · asking ${fmtM(p.price)} · valued ${fmtM(p.valuation)} · <span class="badge green">Live</span> · ${40+hash(p.id)%120} investor views · ${hostedNightsFor(p.id)} nights booked next 6 months</span></div><a class="btn btn-outline btn-sm" href="#/property/${p.id}">Calendar</a></div>`).join('')}
         ${state.submissions.map(s=>`<div class="list-item"><div style="width:76px;height:56px;border-radius:10px;background:var(--sand)"></div><div class="t"><b>${esc(s.name)}</b><span>${esc(s.city)}, ${esc(s.country)} · asking ${fmt(s.price)} · <span class="badge">${s.status}</span> · submitted ${shortDate(s.date)}</span></div>${s.status==='In review'?`<button class="btn btn-outline btn-sm" data-approve="${s.id}">Simulate approval</button>`:''}</div>`).join('')}
       </div>
