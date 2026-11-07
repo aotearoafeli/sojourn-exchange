@@ -26,3 +26,14 @@ Double-click `Start Sojourn.command` (or `cd site && python3 -m http.server 8080
 The hosted artifact is capped at 512 files, so there each residence's photos are packed into two vertical
 "strip" JPEGs (`strip-a.jpg`, `strip-b.jpg`) and rendered as sprites (`sprite` field in `data/properties.js`).
 The local build uses the individual files. The app supports both.
+
+## Deployment
+
+- **Production:** https://sojourn-exchange-seven.vercel.app (also `sojourn-exchange-pantheon-labs1.vercel.app`)
+- **Vercel project:** `sojourn-exchange` on team Pantheon Labs, linked to GitHub `aotearoafeli/sojourn-exchange`
+- Every push to `main` auto-deploys to production; other branches get preview URLs.
+- Static site, no build step (`vercel.json` sets clean URLs and long-lived caching for `/assets`).
+
+## Demo account
+
+- `phillip.dimitrov@gmail.com` / `test1234` (Founding Principal, seeded on first load)
