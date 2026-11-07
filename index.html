@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sojourn Exchange — The private exchange for investment residences</title>
+<meta name="description" content="The private exchange for turnkey investment residences of $20M and above. Publish for free, receive 7 nights, earn a night for every night you host. 0.5% from buyer and seller on completion.">
+<meta name="theme-color" content="#0e1116">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/img/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/brand/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sojourn">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#/">
+      <img src="assets/img/brand/mark.svg" alt="">
+      <span class="wordmark">SOJOURN<small>E X C H A N G E</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#/browse" data-route="browse">Acquire</a>
+      <a href="#/how-it-works" data-route="how-it-works">How it works</a>
+      <a href="#/apply" data-route="apply">Dispose</a>
+    </nav>
+    <div class="nav-cta">
+      <span id="navGuest" class="nav-group">
+        <a class="nav-signin" href="#/login">Sign in</a>
+        <a class="btn btn-gold btn-sm" href="#/signup">Create account</a>
+      </span>
+      <span id="navAuthed" class="nav-group hidden">
+        <a class="credit-pill" href="#/dashboard" title="Nights available"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><b id="navCredits">7</b> nights</a>
+        <a class="btn btn-gold btn-sm" href="#/apply">Apply to publish</a>
+        <span class="avatar-wrap"><a class="avatar" href="#/dashboard" id="navAvatar">PD</a>
+          <div class="avatar-menu hidden" id="avatarMenu"><a href="#/dashboard">My portfolio desk</a><a href="#/apply">Apply to publish</a><a href="#" id="menuLogout">Sign out</a></div></span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="footer dark">
+  <div class="wrap">
+    <div>
+      <img src="assets/img/brand/logo.svg" alt="Sojourn Exchange" style="height:44px;margin-bottom:16px">
+      <p style="max-width:380px">The private exchange where principals and family offices acquire and dispose of turnkey investment residences of $20M and above — and underwrite each acquisition by living in it first.</p>
+      <p style="margin-top:14px;font-size:12px;opacity:.6">Demo build · Residences shown are real public listings marketed by Sotheby's International Realty affiliates, reproduced for demonstration only. Sojourn is not affiliated with, and these owners have not joined, the exchange. Valuations, yields and availability are illustrative.</p>
+    </div>
+    <div><h5>Exchange</h5><a href="#/browse">All residences</a><a href="#/browse?region=Europe">Europe</a><a href="#/browse?region=Americas">Americas</a><a href="#/browse?region=Asia-Pacific">Asia-Pacific</a><a href="#/browse?region=Caribbean">Caribbean</a><a href="#/browse?region=Middle East">Middle East</a></div>
+    <div><h5>Principals</h5><a href="#/how-it-works">How the exchange works</a><a href="#/apply">Dispose of a residence</a><a href="#/dashboard">Portfolio desk</a><a href="#/login">Sign in</a><a href="#/signup">Create account</a></div>
+    <div><h5>Company</h5><a href="#">About</a><a href="#">Valuation partners</a><a href="#">Privacy</a><a href="#">Terms</a><a href="mobile.html">Mobile app preview</a></div>
+  </div>
+</footer>
+
+<nav class="tabbar" id="tabbar">
+  <a href="#/" data-route="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
+  <a href="#/browse" data-route="browse"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Acquire</a>
+  <a href="#/dashboard" data-route="stays"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>Residencies</a>
+  <a href="#/apply" data-route="apply"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Dispose</a>
+  <a href="#/dashboard" data-route="dashboard"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Desk</a>
+</nav>
+
+<div class="toast" id="toast"></div>
+<div id="modalRoot"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="data/properties.js"></script>
+<script src="js/app.js"></script>
+<script>
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) { navigator.serviceWorker.register('sw.js').catch(()=>{}); }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sojourn — mobile app preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;min-height:100vh;background:radial-gradient(1200px 600px at 70% -10%,#2a3140,#0e1116 60%);font-family:Inter,sans-serif;color:#f6f2ea;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;padding:40px 8vw}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:56px;line-height:1.05;margin:0 0 16px}
+h1 em{color:#c6a15b;font-style:italic}
+p{color:#aaa397;max-width:460px;line-height:1.6}
+.k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#c6a15b;font-weight:600}
+.phone{width:393px;height:852px;border-radius:56px;background:#0b0d11;padding:14px;box-shadow:0 40px 120px rgba(0,0,0,.6),inset 0 0 0 2px #2a2f38;position:relative}
+.phone::before{content:"";position:absolute;top:26px;left:50%;transform:translateX(-50%);width:120px;height:34px;background:#0b0d11;border-radius:20px;z-index:2}
+.phone iframe{width:100%;height:100%;border:0;border-radius:44px;background:#0e1116}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.pills span{border:1px solid rgba(255,255,255,.18);padding:8px 14px;border-radius:999px;font-size:12.5px}
+a{color:#c6a15b}
+@media(max-width:900px){body{grid-template-columns:1fr;justify-items:center}.phone{transform:scale(.85);transform-origin:top center}}
+</style></head>
+<body>
+<div>
+  <div class="k">Sojourn · iOS / Android (PWA)</div>
+  <h1>The exchange,<br><em>in your pocket.</em></h1>
+  <p>The same application running in a 393×852 viewport — the layout you'd see installed on an iPhone 15 Pro. Install it from Safari/Chrome via <b>Share → Add to Home Screen</b>; it launches full-screen with its own icon and caches the shell and images offline.</p>
+  <div class="pills"><span>Bottom tab navigation</span><span>Single-month calendar</span><span>Swipeable destinations</span><span>Offline shell cache</span><span>Install banner</span></div>
+  <p style="margin-top:24px"><a href="index.html">← Back to desktop site</a></p>
+</div>
+<div class="phone"><iframe src="index.html#/" title="Sojourn mobile"></iframe></div>
+</body></html>
